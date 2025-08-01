@@ -1,0 +1,5499 @@
+{
+	"info": {
+		"_postman_id": "1ddcddb1-b8c1-43fb-89a4-b5e882538da6",
+		"name": "Payment Bridge 1.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23908508",
+		"_collection_link": "https://speeding-satellite-750075.postman.co/workspace/New-Team-Workspace~32e0672d-afb8-45f2-8c84-1d19c93b8ce9/collection/23908508-1ddcddb1-b8c1-43fb-89a4-b5e882538da6?action=share&source=collection_link&creator=23908508"
+	},
+	"item": [
+		{
+			"name": "health",
+			"item": [
+				{
+					"name": "App Controller get Health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/health",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"health"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/health",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"health"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "keys",
+			"item": [
+				{
+					"name": "auth-token",
+					"item": [
+						{
+							"name": "Rotate auth token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{auth-token}}",
+										"description": "(Required) "
+									}
+								],
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/keys/auth-token/rotate",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"keys",
+										"auth-token",
+										"rotate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Rotate auth token",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{auth-token}}",
+												"description": "(Required) "
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/auth-token/rotate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"auth-token",
+												"rotate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 10:17:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "86"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Token",
+											"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDY3ODU4MzIsImV4cCI6MTc0Njg3MjIzMiwianRpIjoiand0LTE3NDY3ODU4MzI5MDUifQ.edKY5Zmgj_WuEcrdGXT436fGii7aDd7Px0qgH__ACF6tGswXo2mqcJWZh2cYxC9afBeb5qdNAN5uKCX5Y2EDDg"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"56-QTGqWxF5tDfejDuydEz+/Y7LYvo\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"ack_id\": \"ack-1746785832915-1d720e72-9162-4c99-9a44-29fa095e3118\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Acknowledge and activate new token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Token",
+										"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwOTciLCJpYXQiOjE3NDc5MDI2NTQsImV4cCI6MTc0NzkwNjI1NCwianRpIjoiand0LTE3NDc5MDI2NTQ0ODYifQ.hLz0tBLnGCOBtgzp04V_NhvbgGH5m9PWGpzFJaAMAFPKgBm6wN2chdmrnbCKW3WZMn8nQukO86YxroHiXNjZAQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ackId\": \"ack-1749733894298-8145fc15-5d5e-4843-9a2f-37dd88297e06\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/keys/auth-token/ack",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"keys",
+										"auth-token",
+										"ack"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Acknowledge and activate new token",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ack_id\": \"ack-1746785832915-1d720e72-9162-4c99-9a44-29fa095e3118\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/auth-token/ack",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"auth-token",
+												"ack"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 10:18:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "20"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"14-Y53wuE/mmbSikKcT/WualL1N65U\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Check token expiry",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{auth-token}}",
+										"description": "(Required) "
+									}
+								],
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/keys/auth-token/expiry",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"keys",
+										"auth-token",
+										"expiry"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Check token expiry",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{auth-token}}",
+												"description": "(Required) "
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/auth-token/expiry",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"auth-token",
+												"expiry"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 10:20:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "76"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"4c-DF3mcYSneo9+R34DRYWOwYZvYqU\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "BM01496644=01c48fc5140b24342d9a2dda3595e9a46067522827338dbd9e708a32296a187d440d4e9de445783995b0f92f4f168549edaff2b387; Path=/; Domain=.nposuatapi.bmtest.om; Secure; HttpOnly;"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"expiresAt\": \"2025-05-10T10:17:12.904Z\",\n    \"timeLeft\": 86188\n}"
+								},
+								{
+									"name": "Check token expiry",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{auth-token}}",
+												"description": "(Required) "
+											}
+										],
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/keys/auth-token/expiry",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"keys",
+												"auth-token",
+												"expiry"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 May 2025 12:44:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "98"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"62-3L90GKmtj0vO6TCRjW55xkNxhjo\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"19 hours left for the key to be expired\",\n    \"hoursLeftForRotation\": 19\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "auth-key",
+					"item": [
+						{
+							"name": "Rotate auth key",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{auth-token}}",
+										"description": "(Required) "
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/keys/auth-key/rotate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"keys",
+										"auth-key",
+										"rotate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Rotate auth key",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{auth-token}}",
+												"description": "(Required) "
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/auth-key/rotate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"auth-key",
+												"rotate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 10:23:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "141"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"8d-CXkOL+6hhw0C5aPDiORYVk4b8A8\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"ack_id\": \"ack-1746786221750-d208f7d2-cc86-46a3-9cfe-28c00d3e3569\",\n    \"newAuthKey\": \"MS_4d548fe9-b3c9-4000-bb94-d920ae42bec8\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Acknowledge and activate new key",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwOTciLCJpYXQiOjE3NDc5MDI2NTQsImV4cCI6MTc0NzkwNjI1NCwianRpIjoiand0LTE3NDc5MDI2NTQ0ODYifQ.hLz0tBLnGCOBtgzp04V_NhvbgGH5m9PWGpzFJaAMAFPKgBm6wN2chdmrnbCKW3WZMn8nQukO86YxroHiXNjZAQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ackId\":\"ack-1749733781718-14c0f027-6f52-481f-8ee5-33039fce9b21\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/keys/auth-key/ack",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"keys",
+										"auth-key",
+										"ack"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Acknowledge and activate new key",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ack_id\": \"ack-1746786221750-d208f7d2-cc86-46a3-9cfe-28c00d3e3569\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/auth-key/ack",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"auth-key",
+												"ack"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 10:24:59 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "20"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"14-Y53wuE/mmbSikKcT/WualL1N65U\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Check auth key expiry",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{auth-token}}",
+										"description": "(Required) "
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/keys/auth-key/expiry",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"keys",
+										"auth-key",
+										"expiry"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Check auth key expiry",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{auth-token}}",
+												"description": "(Required) "
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/auth-key/expiry",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"auth-key",
+												"expiry"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 10:26:51 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "76"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"4c-UbgXmaBZyQv7NhXqHxEolf2YJYQ\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"expiresAt\": \"2025-05-10T10:17:12.904Z\",\n    \"timeLeft\": 85821\n}"
+								},
+								{
+									"name": "Check auth key expiry",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{auth-token}}",
+												"description": "(Required) "
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/auth-key/expiry",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"auth-key",
+												"expiry"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 May 2025 10:24:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "76"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"4c-za9FIlcm5AZUNMTzgLOD8pId6hw\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "BM01496644=01c48fc5142a2ab904a4850d53ab479d798a5ca6307868bb2e61434d84859c8d9899cc6fda4540d0702ca9f4a19a6c4951ff7e9793; Path=/; Domain=.nposuatapi.bmtest.om; Secure; HttpOnly;"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"expiresAt\": \"2025-05-12T05:32:07.277Z\",\n    \"timeLeft\": 68882\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "body-enc-key",
+					"item": [
+						{
+							"name": "Encrypt data_using encryption old key",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "token",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n     \"key\":\"acadc804d7b0fa2348877092926d6250\"                      //rotate key\n    },\n \"encryptionKey\":\"8328f2bac985ed3015c1db52435b5a3d\" \n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/encryptTransactionData",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"transaction",
+										"encryptTransactionData"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Rotate Body Enc Key",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfODEyNDFkOTUtZGQwOS00ZDZlLTkwNTItN2MzYjY3NjY3NzMz",
+												"description": "(Required) "
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Token",
+												"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDY5NDE1MjcsImV4cCI6MTc0Njk0NTEyNywianRpIjoiand0LTE3NDY5NDE1MjcyNzcifQ.mY4hHIPr8QH5IY3XcXZBVIZxNKkNlBq5zWm6R08XUpLrVlLdeO7KxKEqaoiz2hQ5varjaHwdyuxvcwy6PS-NCw",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"data\" :\"+5UcBcO5zGce01ywiZ4mOd8rmVLusZEW6eNJxR1Q+CRqODlKYMR9XYGfvSK261ZH\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/body-enc-key/rotate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"body-enc-key",
+												"rotate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 May 2025 10:20:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "172"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"ac-RllgtfiAJp5LemxwhIX5+GpHbWk\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"ack_id\": \"ack-1746958857708-653a595d-c7fc-4f5d-9741-00ab4fe73e06\",\n    \"newEncryptedData\": \"VkJzYdNl3uybHPdVntxagJKHnqMDYC29oKywp7qykIgtk9BWoNNKvqD3mwwj5wLy\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Rotate Body Enc Key",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Token",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\":\"nJ21v3nAGlaoKomsoM0WNQdL6pL0WO+uqUZIhG4Gls8jiBnyAh+cn4QhTSrLHc5w\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/keys/body-enc-key/rotate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"keys",
+										"body-enc-key",
+										"rotate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Rotate Body Enc Key",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfODEyNDFkOTUtZGQwOS00ZDZlLTkwNTItN2MzYjY3NjY3NzMz",
+												"description": "(Required) "
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Token",
+												"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDY5NDE1MjcsImV4cCI6MTc0Njk0NTEyNywianRpIjoiand0LTE3NDY5NDE1MjcyNzcifQ.mY4hHIPr8QH5IY3XcXZBVIZxNKkNlBq5zWm6R08XUpLrVlLdeO7KxKEqaoiz2hQ5varjaHwdyuxvcwy6PS-NCw",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"data\" :\"+5UcBcO5zGce01ywiZ4mOd8rmVLusZEW6eNJxR1Q+CRqODlKYMR9XYGfvSK261ZH\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/body-enc-key/rotate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"body-enc-key",
+												"rotate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 May 2025 10:20:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "172"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"ac-RllgtfiAJp5LemxwhIX5+GpHbWk\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"ack_id\": \"ack-1746958857708-653a595d-c7fc-4f5d-9741-00ab4fe73e06\",\n    \"newEncryptedData\": \"VkJzYdNl3uybHPdVntxagJKHnqMDYC29oKywp7qykIgtk9BWoNNKvqD3mwwj5wLy\"\n}"
+								},
+								{
+									"name": "Rotate Body Enc Key",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfYWIxMTY0MDYtMDg3ZS00MjFmLWFiMDQtMjA0MjcxZDU0YWFi",
+												"description": "(Required) "
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Token",
+												"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDgzMjY4NjEsImV4cCI6MTc0ODQxMzI2MSwianRpIjoiand0LTE3NDgzMjY4NjE4NDgifQ.DqyOYeLn8jjhIt5rXrh7LZh5Oteymyzv69MqtEmzRke1284fbl16yaBAWAirmwni3nFo8FxtPg_nhKM0mi70BQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"data\":\"ZewnzJjqhULXAYK1Klq/JDAR02zGaw9AIWm7UeunoZGNTqdRnRvCFICvBNi6KB7p\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/body-enc-key/rotate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"body-enc-key",
+												"rotate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 12:35:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "183"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"b7-9C1bdVq/cJA2yVTsceCQDIReA2o\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "BM01c525dc=01c48fc514039f06b80a167ecebe3de89fc47d9ba82b8ccb7284acb8a44802e175df0164696621dfaebe336f821c2ad3e280edcd4e; Path=/; Domain=.nposuatpb.bmtest.om; Secure; HttpOnly;"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"ackId\": \"ack-1748349357909-5c722c0e-8de2-4d58-ba75-69aa7749d20a\",\n    \"data\": \"/pDqGvGHKhxWvQmqeqx4/X0LgFo18I9PKSlcX7eDBaqUEq99vu92P2BnhdtiFthn2+eLZPyZaBz22AFVTTa+8g==\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Acknowledge and activate new encryption key",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "token",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ackId\":\"ack-1749102939356-c995fb28-9c32-4b58-a7d0-148709ad1de2\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/keys/body-enc-key/ack",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"keys",
+										"body-enc-key",
+										"ack"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Acknowledge and activate new encryption key",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "TVNfODEyNDFkOTUtZGQwOS00ZDZlLTkwNTItN2MzYjY3NjY3NzMz",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ack_id\": \"ack-1746958857708-653a595d-c7fc-4f5d-9741-00ab4fe73e06\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/body-enc-key/ack",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"body-enc-key",
+												"ack"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 May 2025 10:22:00 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "20"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"14-Y53wuE/mmbSikKcT/WualL1N65U\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Check token expiry",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{auth-token}}",
+										"description": "(Required) "
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":\"99voC8CIHJM2Lumx2RLio9FHacFBM2LkiHrU6G8J5Q7l1NjDDZRTjMyOo6/rFuIVYNRHwLGbnnlDLYBMgy3jqw==\"\r\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/keys/body-enc-key/expiry",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"keys",
+										"body-enc-key",
+										"expiry"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Check token expiry",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDY5NDE1MjcsImV4cCI6MTc0Njk0NTEyNywianRpIjoiand0LTE3NDY5NDE1MjcyNzcifQ.mY4hHIPr8QH5IY3XcXZBVIZxNKkNlBq5zWm6R08XUpLrVlLdeO7KxKEqaoiz2hQ5varjaHwdyuxvcwy6PS-NCw",
+												"description": "(Required) "
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "TVNfODEyNDFkOTUtZGQwOS00ZDZlLTkwNTItN2MzYjY3NjY3NzMz",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\":\"+5UcBcO5zGce01ywiZ4mOd8rmVLusZEW6eNJxR1Q+CRqODlKYMR9XYGfvSK261ZH\"\r\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/keys/body-enc-key/expiry",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"keys",
+												"body-enc-key",
+												"expiry"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 May 2025 10:27:59 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"34-rlKccw1E+/fV8niQk4oFitDfPro\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "https://nposuatrp.bmtest.om"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"expiresAt\": \"2025-05-12T05:32:07.277Z\",\n    \"timeLeft\": 68882\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Group",
+			"item": [
+				{
+					"name": "Create & Get",
+					"item": [
+						{
+							"name": "Group create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"PB Test device\",\r\n  //\"sn\": [\"F21010141B00010\",\"F21051732700827\", \"00061000476\",\"00061003755\"]\r\n   \"sn\" :[\"F21010141B00010\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"group"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Group create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfNWI3ZGNlMDgtNTQwYi00MWI2LTlkZmItMWQxOTBmNzY0Yjll",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"F210\",\r\n    \"sn\": [\"F21010141B00010\"]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"group"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 10:52:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "263"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"11f-z8wApuRUBUViz6dvTycValCUP88\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"F210\",\n        \"sn\": [\n            \"F21010141B00010\"\n        ],\n        \"createdBy\": \"merchantId\",\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"isDeleted\": false,\n        \"_id\": \"6825c75c3a590def4030b818\",\n        \"createdAt\": \"2025-05-15T10:52:12.706Z\",\n        \"updatedAt\": \"2025-05-15T10:52:12.706Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Group Controller find One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group/:id",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"group",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68356b11a272e7652ebbf6a3",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Group Controller find One",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfNWI3ZGNlMDgtNTQwYi00MWI2LTlkZmItMWQxOTBmNzY0Yjll",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group/:id",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"group",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "6825c75c3a590def4030b818",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 10:55:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "271"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"11f-b1VnfHR6HxP/dm6r6nuu5+BAwFs\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "BM01039d2e=01c48fc5142e67cd7c59f7e7f7c80fe69748fa213ca8e65c4a5a604b4f99a8d3df501a3e1a8debe1eea7c27b00e002dcf444504838; Path=/; Secure; HttpOnly;"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6825c75c3a590def4030b818\",\n        \"name\": \"F210\",\n        \"sn\": [\n            \"F21010141B00010\"\n        ],\n        \"createdBy\": \"merchantId\",\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2025-05-15T10:52:12.706Z\",\n        \"updatedAt\": \"2025-05-15T10:52:12.706Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Group Controller get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"group"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Group Controller get All",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfNWI3ZGNlMDgtNTQwYi00MWI2LTlkZmItMWQxOTBmNzY0Yjll",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"group"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 10:58:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "362"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"251-NIzA/b0oFdKeP3XBc71n/loL9YA\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"docs\": [\n            {\n                \"_id\": \"6825c75c3a590def4030b818\",\n                \"name\": \"F210\",\n                \"sn\": [\n                    \"F21010141B00010\"\n                ],\n                \"createdBy\": \"merchantId\",\n                \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-05-15T10:52:12.706Z\",\n                \"updatedAt\": \"2025-05-15T10:52:12.706Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6819c57f7149932a461efddd\",\n                \"name\": \"PB Devices\",\n                \"sn\": [\n                    \"00061003755\",\n                    \"F21010141B00010\"\n                ],\n                \"createdBy\": \"merchantId\",\n                \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-05-06T08:17:03.396Z\",\n                \"updatedAt\": \"2025-05-15T10:56:52.945Z\",\n                \"__v\": 0\n            }\n        ],\n        \"totalCount\": 2,\n        \"totalPage\": null\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Group Controller update Group",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth-key}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"sn\":[\"00061000451\",\"F21010141B00010\"],\n  \"name\":\"PB group Test\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group/update/:id",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"group",
+												"update",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68356b11a272e7652ebbf6a3",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Group Controller update Group",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "TVNfNWI3ZGNlMDgtNTQwYi00MWI2LTlkZmItMWQxOTBmNzY0Yjll",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"sn\":[\"00061003755\", \"F21010141B00010\"],\n  \"name\": \"PB Devices\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group/update/:id",
+													"protocol": "https",
+													"host": [
+														"nposuatpb",
+														"bmtest",
+														"om"
+													],
+													"path": [
+														"payment-bridge",
+														"v1",
+														"group",
+														"update",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "6819c57f7149932a461efddd",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Date",
+													"value": "Thu, 15 May 2025 10:56:53 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "299"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Encoding",
+													"value": "br"
+												},
+												{
+													"key": "Etag",
+													"value": "W/\"134-HcQFLcwRJlgCLZl8OVZSgtzw28U\""
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=16070400; includeSubDomains"
+												},
+												{
+													"key": "Content-Security-Policy",
+													"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+												},
+												{
+													"key": "X-Xss-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Access-Control-Allow-Headers",
+													"value": "Content-Type, Authorization"
+												},
+												{
+													"key": "Access-Control-Allow-Headers",
+													"value": "Content-Type, Authorization"
+												},
+												{
+													"key": "Access-Control-Expose-Headers",
+													"value": "Origin"
+												},
+												{
+													"key": "Referrer-Policy",
+													"value": "no-referrer"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Access-Control-Allow-Methods",
+													"value": "GET, POST, OPTIONS, PUT, DELETE"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"_id\": \"6819c57f7149932a461efddd\",\n        \"name\": \"PB Devices\",\n        \"sn\": [\n            \"00061003755\",\n            \"F21010141B00010\"\n        ],\n        \"createdBy\": \"merchantId\",\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2025-05-06T08:17:03.396Z\",\n        \"updatedAt\": \"2025-05-15T10:56:52.945Z\",\n        \"__v\": 0\n    }\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": []
+				},
+				{
+					"name": "Group Controller delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group/delete/:id",
+							"protocol": "https",
+							"host": [
+								"nposuatpb",
+								"bmtest",
+								"om"
+							],
+							"path": [
+								"payment-bridge",
+								"v1",
+								"group",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6819c57f7149932a461efddd"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Group Controller delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "TVNfNWI3ZGNlMDgtNTQwYi00MWI2LTlkZmItMWQxOTBmNzY0Yjll",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/group/delete/:id",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"group",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6825c75c3a590def4030b818"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 11:03:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"11e-7TzQCB7oKknaYQVFcMzLwnSQcz0\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=16070400; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Origin"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6825c75c3a590def4030b818\",\n        \"name\": \"F210\",\n        \"sn\": [\n            \"F21010141B00010\"\n        ],\n        \"createdBy\": \"merchantId\",\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"isDeleted\": true,\n        \"createdAt\": \"2025-05-15T10:52:12.706Z\",\n        \"updatedAt\": \"2025-05-15T11:03:19.087Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "shift-batch",
+			"item": [
+				{
+					"name": "initiate",
+					"item": [
+						{
+							"name": "Manual Shift encrypt",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{auth-token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"type\": \"manual\",                                     \r\n        \"name\": \"Shift BM\"\r\n        },\r\n    \"encryptionKey\":\"75c6c7daafd186b8c4c22cf036f5dbe5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/encryptTransactionData",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"transaction",
+										"encryptTransactionData"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Shift encrypt",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "TVNfM2IxM2QyZTUtMGUyNC00YmM0LThmODAtMjBmZDdkMDk1NDBm",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\": {\r\n        \"type\": \"manual\",                                       //type:\"manual\" ,\"auto\"\r\n      //  \"startTime\": \"2025-05-22 12:06:02.682\",               // Auto shift\r\n        \"name\": \"Shift A\"\r\n        },\r\n    \"encryptionKey\":\"acadc804d7b0fa2348877092926d6250\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/encryptTransactionData",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"transaction",
+												"encryptTransactionData"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 05:53:22 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"42-wm0vjsNs+/VG1wxFWE0GFYyE8Zs\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "\"i/rkuY/+fV5qXqRj48IfkczeqdKllibs1WKIuFVDCfEP7Cjgmn1O8h50XrEryhBX\""
+								}
+							]
+						},
+						{
+							"name": "Manual Shift Start",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":\"Gsw/fIY9CsfenVE/VGihUb588yRF+UfI3hqPtGBRSpJxWa7olqmov3pPwWVvsnqe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/shift-batch/initiate",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"shift-batch",
+										"initiate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Shift Batch Controller initiate Shift Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfM2IxM2QyZTUtMGUyNC00YmM0LThmODAtMjBmZDdkMDk1NDBm",
+												"type": "text"
+											},
+											{
+												"key": "Token",
+												"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDgyMzk0NjQsImV4cCI6MTc0ODI0MzA2NCwianRpIjoiand0LTE3NDgyMzk0NjQ1MjMifQ.ETwyYy6NyBIrBbPivynjhaISIeQjLs2O-lnRzC1mZ_0oq-JuEaALyU0xHkPJA7aZ7ODywYQuGcJT7f-sy4R0Ag",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\":\"i/rkuY/+fV5qXqRj48IfkczeqdKllibs1WKIuFVDCfEP7Cjgmn1O8h50XrEryhBX\" //pass encrypted data\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/shift-batch/initiate",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"shift-batch",
+												"initiate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 05:55:07 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "339"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"1cf-KJao7r7r9yjSUol18WiAI3IdFWA\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"data\": {\n        \"name\": \"Shift A\",\n        \"type\": \"manual\",\n        \"status\": \"started\",\n        \"createdBy\": \"merchantId\",\n        \"batchNo\": \"1000\",\n        \"transactionIds\": [],\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"groupMerchantId\": \"663d1bfd24e77dfa6f9eb638\",\n        \"aggregatorId\": \"67b47f44e06cfb09c8ccab9c\",\n        \"isDeleted\": false,\n        \"_id\": \"683553bba272e7652ebbee2f\",\n        \"startTime\": \"2025-05-27T05:55:07.262Z\",\n        \"createdAt\": \"2025-05-27T05:55:07.262Z\",\n        \"updatedAt\": \"2025-05-27T05:55:07.262Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Auto Shift encrypt",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"type\": \"auto\",                                      \r\n        \"startTime\": \"2025-06-10 11:50:47.888\",              //2025-05-27T10:50:47.888Z \r\n        \"name\": \"Auto Shift MS\"\r\n        },\r\n    \"encryptionKey\":\"e64878ae65088e1c63cd2a4a3a6034a0\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/encryptTransactionData",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"transaction",
+										"encryptTransactionData"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Auto shift encrypt",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "TVNfYWIxMTY0MDYtMDg3ZS00MjFmLWFiMDQtMjA0MjcxZDU0YWFi",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\": {\r\n        \"type\": \"Auto\",                                       //type:\"manual\" ,\"auto\"\r\n        \"startTime\": \"2025-05-27 15:040:02.682\",               // Auto shift\r\n        \"name\": \"Auto shift\"\r\n        },\r\n    \"encryptionKey\":\"acadc804d7b0fa2348877092926d6250\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/encryptTransactionData",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"transaction",
+												"encryptTransactionData"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 10:11:38 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "110"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"6e-63I+HPLw3dcMsvQPiZhaihVA2z8\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "\"zAaVp0cNH//HejpBcciM6RRRb3QUBpLMLl4oKgKhCgME5CayipVPg5aTb8OUQrrx7v4+cus2/QUoDw1PpBzQxHC+HvuQ2nt/YyZJG6HhPk8=\""
+								}
+							]
+						},
+						{
+							"name": "Auto shift initiate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":\"RQeIDd0s9MoGxgzQsgyYPF8vOTJuJDa4FbT75droTcPf++oezMTGmHBRjBTugS2KyE+H2sQu2IJgpUkPqaFeq3RMVxOdx380ZqMvoDR8v4I=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/shift-batch/initiate",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"shift-batch",
+										"initiate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Auto shift initiate",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfM2IxM2QyZTUtMGUyNC00YmM0LThmODAtMjBmZDdkMDk1NDBm",
+												"type": "text"
+											},
+											{
+												"key": "Token",
+												"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDgyMzk0NjQsImV4cCI6MTc0ODI0MzA2NCwianRpIjoiand0LTE3NDgyMzk0NjQ1MjMifQ.ETwyYy6NyBIrBbPivynjhaISIeQjLs2O-lnRzC1mZ_0oq-JuEaALyU0xHkPJA7aZ7ODywYQuGcJT7f-sy4R0Ag",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\":\"i/rkuY/+fV5qXqRj48IfkczeqdKllibs1WKIuFVDCfEP7Cjgmn1O8h50XrEryhBX\" //pass encrypted data\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/shift-batch/initiate",
+											"protocol": "https",
+											"host": [
+												"nposuatpb",
+												"bmtest",
+												"om"
+											],
+											"path": [
+												"payment-bridge",
+												"v1",
+												"shift-batch",
+												"initiate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 05:55:07 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "339"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"1cf-KJao7r7r9yjSUol18WiAI3IdFWA\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"data\": {\n        \"name\": \"Shift A\",\n        \"type\": \"manual\",\n        \"status\": \"started\",\n        \"createdBy\": \"merchantId\",\n        \"batchNo\": \"1000\",\n        \"transactionIds\": [],\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"groupMerchantId\": \"663d1bfd24e77dfa6f9eb638\",\n        \"aggregatorId\": \"67b47f44e06cfb09c8ccab9c\",\n        \"isDeleted\": false,\n        \"_id\": \"683553bba272e7652ebbee2f\",\n        \"startTime\": \"2025-05-27T05:55:07.262Z\",\n        \"createdAt\": \"2025-05-27T05:55:07.262Z\",\n        \"updatedAt\": \"2025-05-27T05:55:07.262Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "active",
+					"item": [
+						{
+							"name": "{merchantCpId}",
+							"item": [
+								{
+									"name": "Shift Batch Controller find Active Shift",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth-key}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Token",
+												"value": "{{auth-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/shift-batch/active/:merchantCpId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"shift-batch",
+												"active",
+												":merchantCpId"
+											],
+											"variable": [
+												{
+													"key": "merchantCpId",
+													"value": "CPMS29010000005",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/shift-batch/active/:merchantCpId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"shift-batch",
+														"active",
+														":merchantCpId"
+													],
+													"variable": [
+														{
+															"key": "merchantCpId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "active Copy",
+					"item": [
+						{
+							"name": "{merchantCpId}",
+							"item": [
+								{
+									"name": "Shift Batch Controller find Active Shift",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth-key}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Token",
+												"value": "{{auth-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/shift-batch/list/:merchantCpId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"shift-batch",
+												"list",
+												":merchantCpId"
+											],
+											"variable": [
+												{
+													"key": "merchantCpId",
+													"value": "CPMS29010000005",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/shift-batch/active/:merchantCpId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"shift-batch",
+														"active",
+														":merchantCpId"
+													],
+													"variable": [
+														{
+															"key": "merchantCpId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "{Get group by id}",
+					"item": [
+						{
+							"name": "Shift Batch Controller find One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/shift-batch/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"shift-batch",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6852becded82a2266d0f75f1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Shift Batch Controller find One",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfYWIxMTY0MDYtMDg3ZS00MjFmLWFiMDQtMjA0MjcxZDU0YWFi",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/shift-batch/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"shift-batch",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "683553bba272e7652ebbee2f",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 10:00:30 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "422"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"290-XCTZXbf1tuQ++TPvotiUfxFUJKs\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"683553bba272e7652ebbee2f\",\n        \"name\": \"Shift A\",\n        \"type\": \"manual\",\n        \"status\": \"started\",\n        \"createdBy\": \"merchantId\",\n        \"batchNo\": \"1000\",\n        \"transactionIds\": [\n            \"68356d85a272e7652ebbf849\",\n            \"68356e14a272e7652ebbf8ec\",\n            \"68356efca272e7652ebbfa52\",\n            \"68356fcca272e7652ebbfb3d\",\n            \"68357126a272e7652ebbfbef\",\n            \"68357280a272e7652ebbfceb\"\n        ],\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"groupMerchantId\": \"663d1bfd24e77dfa6f9eb638\",\n        \"aggregatorId\": \"67b47f44e06cfb09c8ccab9c\",\n        \"isDeleted\": false,\n        \"startTime\": \"2025-05-27T05:55:07.262Z\",\n        \"createdAt\": \"2025-05-27T05:55:07.262Z\",\n        \"updatedAt\": \"2025-05-27T08:06:24.872Z\",\n        \"__v\": 0,\n        \"totalTxnAmount\": 3,\n        \"txnCount\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Shift Batch Controller get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/shift-batch",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"shift-batch"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Shift Batch Controller get All",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfYWIxMTY0MDYtMDg3ZS00MjFmLWFiMDQtMjA0MjcxZDU0YWFi",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/shift-batch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"shift-batch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 10:01:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "438"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2ac-8BkxzdeDG5TZPFzLBb/03eRARP4\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"docs\": [\n            {\n                \"_id\": \"683553bba272e7652ebbee2f\",\n                \"name\": \"Shift A\",\n                \"type\": \"manual\",\n                \"status\": \"started\",\n                \"createdBy\": \"merchantId\",\n                \"batchNo\": \"1000\",\n                \"transactionIds\": [\n                    \"68356d85a272e7652ebbf849\",\n                    \"68356e14a272e7652ebbf8ec\",\n                    \"68356efca272e7652ebbfa52\",\n                    \"68356fcca272e7652ebbfb3d\",\n                    \"68357126a272e7652ebbfbef\",\n                    \"68357280a272e7652ebbfceb\"\n                ],\n                \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n                \"groupMerchantId\": \"663d1bfd24e77dfa6f9eb638\",\n                \"aggregatorId\": \"67b47f44e06cfb09c8ccab9c\",\n                \"isDeleted\": false,\n                \"startTime\": \"2025-05-27T05:55:07.262Z\",\n                \"createdAt\": \"2025-05-27T05:55:07.262Z\",\n                \"updatedAt\": \"2025-05-27T08:06:24.872Z\",\n                \"__v\": 0\n            }\n        ],\n        \"totalCount\": 1,\n        \"totalPage\": 1,\n        \"page\": 1,\n        \"limit\": 10\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "end",
+					"item": [
+						{
+							"name": "Shift Batch Controller end Shift",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/shift-batch/end",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"shift-batch",
+										"end"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Shift Batch Controller end Shift",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfYWIxMTY0MDYtMDg3ZS00MjFmLWFiMDQtMjA0MjcxZDU0YWFi",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/shift-batch/end",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"shift-batch",
+												"end"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 10:04:02 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "428"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2bc-I80x09zHlHj3d8gKUPbIxP/9vns\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"683553bba272e7652ebbee2f\",\n        \"name\": \"Shift A\",\n        \"type\": \"manual\",\n        \"status\": \"completed\",\n        \"createdBy\": \"merchantId\",\n        \"batchNo\": \"1000\",\n        \"transactionIds\": [\n            \"68356d85a272e7652ebbf849\",\n            \"68356e14a272e7652ebbf8ec\",\n            \"68356efca272e7652ebbfa52\",\n            \"68356fcca272e7652ebbfb3d\",\n            \"68357126a272e7652ebbfbef\",\n            \"68357280a272e7652ebbfceb\"\n        ],\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"groupMerchantId\": \"663d1bfd24e77dfa6f9eb638\",\n        \"aggregatorId\": \"67b47f44e06cfb09c8ccab9c\",\n        \"isDeleted\": false,\n        \"startTime\": \"2025-05-27T05:55:07.262Z\",\n        \"createdAt\": \"2025-05-27T05:55:07.262Z\",\n        \"updatedAt\": \"2025-05-27T10:04:02.845Z\",\n        \"__v\": 0,\n        \"endTime\": \"2025-05-27T10:04:02.845Z\"\n    },\n    \"message\": \"Shift ended successfully\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cancel",
+					"item": [
+						{
+							"name": "Shift Batch Controller cancel Shift",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth-key}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/shift-batch/cancel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"shift-batch",
+										"cancel"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Shift Batch Controller cancel Shift",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "TVNfYWIxMTY0MDYtMDg3ZS00MjFmLWFiMDQtMjA0MjcxZDU0YWFi",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/shift-batch/cancel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"shift-batch",
+												"cancel"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 10:09:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "89"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"59-erPF2ZkUEr5U50Otv0Co2vuHw5o\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "BM01c525dc=01c48fc5149878a0e1193ade3ee5ff7ec5b9a207cd1384d153191ce191ce4f7fb3007baeb1fe97d37a6655b15964f4bb9ddf5027ef; Path=/; Domain=.nposuatpb.bmtest.om; Secure; HttpOnly;"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"failed\",\n    \"data\": null,\n    \"message\": \"No shift available to cancel\"\n}"
+								},
+								{
+									"name": "Shift Batch Controller cancel Shift",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1/shift-batch/cancel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"shift-batch",
+												"cancel"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 27 May 2025 10:48:26 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "387"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"1fb-ISqs3DcGKlS/dHzihfKI4oLRj9E\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=16070400; includeSubDomains"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Expose-Headers",
+											"value": "Origin"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, POST, OPTIONS, PUT, DELETE"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6835980da272e7652ebc06ed\",\n        \"name\": \"Auto shift\",\n        \"startTime\": \"2025-05-27T11:40:02.682Z\",\n        \"type\": \"auto\",\n        \"status\": \"cancelled\",\n        \"createdBy\": \"merchantId\",\n        \"batchNo\": \"1002\",\n        \"transactionIds\": [],\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"groupMerchantId\": \"663d1bfd24e77dfa6f9eb638\",\n        \"aggregatorId\": \"67b47f44e06cfb09c8ccab9c\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2025-05-27T10:46:37.404Z\",\n        \"updatedAt\": \"2025-05-27T10:48:26.875Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Shift Cancelled successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Token generate & Encryption API's",
+			"item": [
+				{
+					"name": "Generate Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorizationKey\":\"MS_dd2dca42-d3d5-4744-9760-2a04f53214fd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/generateToken",
+							"protocol": "https",
+							"host": [
+								"nposuatpb",
+								"bmtest",
+								"om"
+							],
+							"path": [
+								"payment-bridge",
+								"v1",
+								"transaction",
+								"generateToken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Encrypt AuthKey - pass it in authorization header - base64 enc",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"authorizationKey\": \"MS_81241d95-dd09-4d6e-9052-7c3b67667733\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/transaction/generateToken",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"transaction",
+										"generateToken"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 11 May 2025 09:52:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"40-9Wba5Em1TpvolrHhfLAS7QyR8k8\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=16070400; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Origin"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://nposuatrp.bmtest.om"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"TVNfODEyNDFkOTUtZGQwOS00ZDZlLTkwNTItN2MzYjY3NjY3NzMz\"\n}"
+						},
+						{
+							"name": "Generate Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   // \"authorizationKey\":\"MS_77ac1ff7-bf3b-4065-8240-b14208365ffb\"   //A75\r\n    \"authorizationKey\":\"MS_801e8732-492d-47ee-874e-ce3fb66cda3d\" //F210\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/generateToken",
+									"protocol": "https",
+									"host": [
+										"nposuatpb",
+										"bmtest",
+										"om"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"transaction",
+										"generateToken"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 13:09:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"40-1CSZeqwmJdQQPniFkETB4taFxVA\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=16070400; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Origin"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"TVNfODAxZTg3MzItNDkyZC00N2VlLTg3NGUtY2UzZmI2NmNkYTNk\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Encrypt Request Body",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/jsonTVNfNWIwMTEzYmEtOTg2MS00OGZhLWFkYjUtMjcyZDQwYTlhYTA1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": {                                     //Pick & Select transaction request\n    \"sn\":\"00061000451\" ,       //\"sn\":\"00061003755\",\"sn\":\"F21010141B00010\",\n    \"amount\":\"2\",\n    \"CRN_U\":\"BK0939905\",\n    \"transactionType\":\"sales\",    //pre-auth, pre-auth-complete,sales,void,refund\n    \"transactionGroup\":\"pos\"\n   //,\"txnId\":\"68346a9ea44b3fa8c9e69e86\" \n   // \"groupId\":\"68356b11a272e7652ebbf6a3\"\n  },\n\"encryptionKey\":\"75c6c7daafd186b8c4c22cf036f5dbe5\"     //A75\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/encryptTransactionData",
+							"protocol": "https",
+							"host": [
+								"nposuatpb",
+								"bmtest",
+								"om"
+							],
+							"path": [
+								"payment-bridge",
+								"v1",
+								"transaction",
+								"encryptTransactionData"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Encrypt Request Body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "TVNfODEyNDFkOTUtZGQwOS00ZDZlLTkwNTItN2MzYjY3NjY3NzMz",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": {\n    \"sn\":\"F21010141B00010\",\n    \"amount\":\"10\",\n    \"CRN_U\": \"BK091121\",\n    \"transactionType\":\"sales\",\n    \"transactionGroup\": \"pos\"\n  },\n  \"encryptionKey\": \"a767a6464dfd6596fcddc66166c0aab6\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/transaction/encryptTransactionData",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"transaction",
+										"encryptTransactionData"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 11 May 2025 10:02:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"9a-aangYmBSQL9zZSTpHIXysi6L1mI\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=16070400; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Origin"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://nposuatrp.bmtest.om"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "BM01496644=01c48fc514e775081ebd8f91122f57925fcb98e0b181f8703fd271c8f872038c7298d538a64b05c7f391d74dabee73f296a8e66015; Path=/; Domain=.nposuatapi.bmtest.om; Secure; HttpOnly;"
+								}
+							],
+							"cookie": [],
+							"body": "\"VlKoj5CcRKJZIy/JDd9/Gnioi8m+vX4mCroFUQlAiEUF0v3HDlmsv3WSwHhtFjg5wfOHeuwJz9YavTA5vsNBpp/Y/dV91UH8AFOTJ9lnlSIVK1eBAzN3KMPbV+F/yGgREFMNmj/wjkFBGUeAhX1XdA==\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "initiate transaction",
+			"item": [
+				{
+					"name": "Inititate the transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Token",
+								"value": "{{auth-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\":\"ck2RZ0YrzvOM9iuWSwHEvEeIIDaB5atD/W5DhBdZgTWOE1ir6kti4+0odpmCfKMahQEyn2O6tXnGhsdmSqusbnAW9zdPrNEBcxoG0tiWzmb0EgLCny1PiphP1VcLe4KdUML4IUgP6NxB7LZMoP8ivA==\"\n}\n\n\n",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nposuatpb.bmtest.om/payment-bridge/v1/transaction/initiate",
+							"protocol": "https",
+							"host": [
+								"nposuatpb",
+								"bmtest",
+								"om"
+							],
+							"path": [
+								"payment-bridge",
+								"v1",
+								"transaction",
+								"initiate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inititate the transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer TVNfODEyNDFkOTUtZGQwOS00ZDZlLTkwNTItN2MzYjY3NjY3NzMz",
+										"type": "text"
+									},
+									{
+										"key": "Token",
+										"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDY5NDE1MjcsImV4cCI6MTc0Njk0NTEyNywianRpIjoiand0LTE3NDY5NDE1MjcyNzcifQ.mY4hHIPr8QH5IY3XcXZBVIZxNKkNlBq5zWm6R08XUpLrVlLdeO7KxKEqaoiz2hQ5varjaHwdyuxvcwy6PS-NCw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\":\"VlKoj5CcRKJZIy/JDd9/Gnioi8m+vX4mCroFUQlAiEUF0v3HDlmsv3WSwHhtFjg5PrdQe7dDd8+jnPrLzU4Tpp/Y/dV91UH8AFOTJ9lnlSIVK1eBAzN3KMPbV+F/yGgREFMNmj/wjkFBGUeAhX1XdA==\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/transaction/initiate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"transaction",
+										"initiate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 11 May 2025 10:13:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"ec-8vgY70JypY/nVtzvxAYUwALhsPY\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=16070400; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Origin"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://nposuatrp.bmtest.om"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"code\": \"0000\",\n    \"statusCode\": 200,\n    \"message\": \"Completed\",\n    \"data\": {\n        \"_id\": \"68207819bf64be82888d7d99\",\n        \"sn\": \"F21010141B00010\",\n        \"amount\": 10,\n        \"CRN_U\": \"BK091195\",\n        \"type\": \"direct\",\n        \"transactionType\": \"sales\",\n        \"transactionGroup\": \"pos\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "status",
+			"item": [
+				{
+					"name": "Transaction Controller update Transaction Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "{{auth-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/transaction/check/status?CRN_U=BK0931100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"transaction",
+								"check",
+								"status"
+							],
+							"query": [
+								{
+									"key": "CRN_U",
+									"value": "BK0931100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Transaction Controller update Transaction Status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "TVNfMjIzNThiNDEtY2RlNi00MWVhLWIyMTYtM2Y5NTliZDk2ODFi",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/payment-bridge/v1/transaction/check/status?CRN_U=BK000801",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"payment-bridge",
+										"v1",
+										"transaction",
+										"check",
+										"status"
+									],
+									"query": [
+										{
+											"key": "CRN_U",
+											"value": "BK000801"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 06:08:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"fe-q5kXK+lIfmAQ+GMy4lbsKkpraaY\""
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=16070400; includeSubDomains"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Origin"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "https://nposuatrp.bmtest.om"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "BM01496644=01c48fc5148b899deb71c7d10172124d836162e7f0f3ba6eafaf6d97a41ebf87c259c082ae45594caa01d906be5f6a0ddc70a3d2f6; Path=/; Domain=.nposuatapi.bmtest.om; Secure; HttpOnly;"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"68123e05ef8040ec81544ca7\",\n        \"amount\": 15,\n        \"CRN_U\": \"BK000801\",\n        \"type\": \"pick_and_select\",\n        \"transactionType\": \"sales\",\n        \"transactionGroup\": \"pos\",\n        \"status\": \"success\",\n        \"transactionStatus\": \"pending\",\n        \"invoiceNumber\": \"\"\n    },\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Device Map",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "TVNfMDk0ZTZmMTctNDAwNy00OTY5LTkzZGYtODhmNzZmOTZhMGVl",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"sn\": \"F21010141B00010\",\r\n\"deviceKey\": \"Device F210\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/payment-bridge/v1/transaction/device-map",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"payment-bridge",
+						"v1",
+						"transaction",
+						"device-map"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Transaction Controller device Map",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "TVNfMDk0ZTZmMTctNDAwNy00OTY5LTkzZGYtODhmNzZmOTZhMGVl",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"sn\": \"F21010141B00010\",\r\n\"deviceKey\": \"Device F210\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/payment-bridge/v1/transaction/device-map",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payment-bridge",
+								"v1",
+								"transaction",
+								"device-map"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 06:04:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"110-G9eelDX+MnHBQlU0PnTh3ONkjOw\""
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=16070400; includeSubDomains"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self'; script-src 'self' https://uatcredopayapp.testad.com;style-src 'self' https://uatcredopayapp.testad.com;"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Origin"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BM01c525dc=01c48fc51475251e273ea078b9e6d8259299c7b61b5d926f5e3b644c7f6aa189e4a1b4fe5b0b746f81f7b41fcfe0cbd266c57ff209; Path=/; Domain=.nposuatpb.bmtest.om; Secure; HttpOnly;"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6818bfddcd631ccee11bd41a\",\n        \"merchantId\": \"663d1bfd24e77dfa6f9eb693\",\n        \"sn\": \"F21010141B00010\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-05-05T13:40:45.464Z\",\n        \"deviceKey\": \"Device F210\",\n        \"isDeleted\": false,\n        \"updatedAt\": \"2025-05-28T06:04:30.519Z\"\n    },\n    \"statusCode\": 200\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://nposuatapi.bmtest.om/payment-bridge",
+			"type": "string"
+		},
+		{
+			"key": "auth-key",
+			"value": "TVNfMmY0NDdmNzItMzlhNi00ZjgzLThhY2MtMzlhMTZkNzA2OGZi",
+			"type": "default"
+		},
+		{
+			"key": "auth-token",
+			"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDUE1TMjkwMTAwMDAwMDUiLCJpYXQiOjE3NDgzMjUyMTYsImV4cCI6MTc0ODMyODgxNiwianRpIjoiand0LTE3NDgzMjUyMTY2ODAifQ.yR6BDATr4BTK_f0kXOllasrzZwrSAckTtZiLCPnhNuT9gC-ZB_m994vWPP9aeh1yv8TuIoka3cmKnG_fTtI7DQ",
+			"type": "default"
+		}
+	]
+}
